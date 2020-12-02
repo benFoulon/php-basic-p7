@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post" novalidate>
+        
+        {% if errors.login is defined %}
+            <div class="error">
+                {{ errors.login }}
+            </div>
+        {% endif %}
+        
+        <div class="">
+            <input type="text" name="login" id="" placeholder="login" required>
+        </div>
+            {% if errors.year is defined %}
+            <div>
+                {{ errors.year }}
+            </div>
+            {% endif %}
+        <div class="">
+            <input type="number" name="year" id="" placeholder="year" required>
+        </div>
+        
+            {% if errors.email is defined %}
+            <div>
+                {{ errors.email }}
+            </div>
+            {% endif %}
+        
+        <div class="">
+            <input type="email" name="email" id="" placeholder="email" required>
+        </div>
+        <div class="">
+            <button type="submit">Valider</button>
+        </div>
+    </form>
+</body>
+</html>
